@@ -1,8 +1,8 @@
 # openamigacairo
 
 cairo and pixman for AmigaOS 3.x on 68k, built as static link libraries for
-GCC programs. Part of the [OpenAmiga](https://github.com/DalsinAI/openamiga)
-ports, made for [OpenBrowser](https://github.com/DalsinAI/openamigabrowser),
+GCC programs. Part of the [GFOpenAmiga](https://github.com/DalsinAI/openamiga)
+ports, made for [GFOpenBrowser](https://github.com/DalsinAI/openamigabrowser),
 the WebKit browser for AmigaOS 3.2.
 
 **Status:** Working: builds, and the smoke test draws correctly on the bench.
@@ -22,7 +22,7 @@ for the library goes to its authors; see `upstream/` for their notices.
 
 ## What the Amiga port changes
 
-- No source changes to either. pixman is built from its portable C paths (68k has no SIMD) with a hand-written `config/pixman/pixman-config.h`. cairo is built without Meson from its source list, with image surfaces, PNG writing and the FreeType/fontconfig font backend (`config/cairo/config.h`, `config/cairo/cairo-features.h`), or with `CAIRO_FONTS=user` without that backend: user fonts only, for programs that draw their own glyphs (OpenBrowser draws OpenFont's outlines, openfont.library, through cairo user fonts).
+- No source changes to either. pixman is built from its portable C paths (68k has no SIMD) with a hand-written `config/pixman/pixman-config.h`. cairo is built without Meson from its source list, with image surfaces, PNG writing and the FreeType/fontconfig font backend (`config/cairo/config.h`, `config/cairo/cairo-features.h`), or with `CAIRO_FONTS=user` without that backend: user fonts only, for programs that draw their own glyphs (GFOpenBrowser draws GFOpenFont's outlines, gfopenfont.library, through cairo user fonts).
 
 ## Building
 
@@ -46,7 +46,7 @@ With `CAIRO_FONTS=user`: `-lcairo -lpixman-1 -lpng -lz -lpthread -latomic -lm`
 
 ## Tested
 
-`tests/cairotest.c`, run on AmigaOS 3.2.3 on AmigaChrome's AC090 emulation (68040 with FPU, 256 MB), Instance-24, 4 October 2026, as `cairotest DH1:OBFonts/LiberationSans-Bold.ttf DH1:Probe/cairotest.png`:
+`tests/cairotest.c`, run on AmigaOS 3.2.3 on AmiCradle's AC090 emulation (68040 with FPU, 256 MB), Instance-24, 4 October 2026, as `cairotest DH1:OBFonts/LiberationSans-Bold.ttf DH1:Probe/cairotest.png`:
 
 ```
 CAIRO 1.18.6 status=no error has occurred sum=eb16d1e7 px(20,20)=ff4264d6 px(60,85)=ff4cb74c
