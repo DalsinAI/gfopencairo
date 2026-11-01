@@ -4,11 +4,11 @@ _Written 6 October 2026 at about 23:55 UTC, while all work is paused on @SacredT
 
 ## What this repo is
 
-cairo and pixman built for AmigaOS 3.x (m68k) as static link libraries. Part of the Open family and an OpenBrowser dependency. Upstream source is fetched and pinned at build time, never committed.
+cairo and pixman built for AmigaOS 3.x (m68k) as static link libraries. Part of the GFOpen family and a GFOpenBrowser dependency. Upstream source is fetched and pinned at build time, never committed.
 
 ## Where it stands
 
-Stable: it builds and OpenBrowser links it. Only the CONTRIBUTORS.md pass landed today. pixman/cairo painting is due to be routed through OpenGfx, which the AC090 thread owns.
+Stable: it builds and GFOpenBrowser links it. Only the CONTRIBUTORS.md pass landed today. pixman/cairo painting is due to be routed through GFOpenGfx, which the AC090 thread owns.
 
 ## Merged lately
 
@@ -28,7 +28,7 @@ Stable: it builds and OpenBrowser links it. Only the CONTRIBUTORS.md pass landed
 
 ## Who owns it
 
-JSC thread (OpenBrowser). AC090 thread for the OpenGfx route.
+JSC thread (GFOpenBrowser). AC090 thread for the GFOpenGfx route.
 
 ## Capsules
 
