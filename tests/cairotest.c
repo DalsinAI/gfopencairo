@@ -1,4 +1,4 @@
-/* openamigacairo smoke test: shapes, a gradient and FreeType text into an
+/* gfopencairo smoke test: shapes, a gradient and FreeType text into an
  * image surface, saved as PNG, with a checksum of the pixels. */
 #include <stdio.h>
 #include <stdint.h>
